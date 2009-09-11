@@ -15,6 +15,7 @@ module SparringHangman
     # in case you want to keep track of it.
     def new_game(guesses_left)
       @left = ('a'..'z').to_a
+      @left.unshift(@left.delete('e'))
     end
 
     # Each turn your player must make a guess.  The word will be a bunch of underscores, one for each letter in the word.
